@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafe Brand - Home</title>
+  <meta name="description" content="Brand introduction for Cafe Brand. Elegant, light corporate cafe with coffee, pastries, and welcoming spaces." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            secondary: '#7C3AED',
+            accent: '#F59E0B',
+            surface: '#F9FAFB',
+            text: '#1F2937',
+            'text-secondary': '#6B7280'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+  <header class="fixed w-full top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-sm z-50">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center space-x-2" aria-label="Cafe Brand home">
+        <span class="text-xl font-bold" style="color: #2563EB;">Cafe Brand</span>
+      </a>
+      <ul class="hidden md:flex items-center space-x-6" role="menubar" aria-label="Main menu">
+        <li><a href="index.html#home" class="text-gray-700 hover:text-primary" role="menuitem">Home</a></li>
+        <li><a href="index.html#menu" class="text-gray-700 hover:text-primary" role="menuitem">Menu</a></li>
+        <li><a href="about.html" class="text-gray-700 hover:text-primary" role="menuitem">About</a></li>
+        <li><a href="index.html#locations" class="text-gray-700 hover:text-primary" role="menuitem">Locations</a></li>
+        <li><a href="index.html#gallery" class="text-gray-700 hover:text-primary" role="menuitem">Gallery</a></li>
+        <li><a href="contact.html" class="text-gray-700 hover:text-primary" role="menuitem">Contact</a></li>
+      </ul>
+      <button id="mobileMenuBtn" class="md:hidden text-gray-700" aria-label="Open menu">Menu</button>
+    </nav>
+  </header>
+
+  <main id="home" class="pt-28">
+    <section class="bg-white py-14">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <span class="inline-block px-3 py-1 bg-primary text-white rounded-full text-sm font-semibold mb-4" aria-label="Brand tag">Brand Studio</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-text mb-4" style="font-family: Inter, sans-serif;">Cafe Brand — Elevating coffee, pastry, and moments of calm</h1>
+            <p class="text-gray-700 mb-6" style="font-family: Inter, sans-serif;">A light, corporate-inspired cafe focused on delivering a refined yet welcoming experience. Fresh beverages, artisan pastries, and thoughtful service in a modern setting.</p>
+            <div class="flex items-center gap-4">
+              <a href="#menu" class="inline-flex items-center bg-primary text-white px-5 py-3 rounded-md hover:bg-blue-700 transition" aria-label="View menu">
+                View Menu
+              </a>
+              <a href="#locations" class="inline-flex items-center bg-slate-100 text-gray-800 px-5 py-3 rounded-md hover:bg-slate-200 transition" aria-label="Locations">
+                Locations
+              </a>
+            </div>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1526312420172-7f9a78d5d3cf?auto=format&fit=crop&w=1200&q=60" alt="Cafe interior with natural light" class="w-full rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-12 bg-surface">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4" style="font-family: Inter, sans-serif;">Menu</h2>
+        <p class="text-sm text-gray-600 mb-4">Categories: Coffee, Tea, Pastry, Food</p>
+        <div class="flex flex-wrap gap-2 mb-6" role="group" aria-label="Menu categories">
+          <button class="px-3 py-2 rounded-md bg-white border border-gray-200 hover:bg-gray-50" data-filter="all" aria-label="Show all items">All</button>
+          <button class="px-3 py-2 rounded-md bg-white border border-gray-200 hover:bg-gray-50" data-filter="coffee" aria-label="Filter coffee">Coffee</button>
+          <button class="px-3 py-2 rounded-md bg-white border border-gray-200 hover:bg-gray-50" data-filter="tea" aria-label="Filter tea">Tea</button>
+          <button class="px-3 py-2 rounded-md bg-white border border-gray-200 hover:bg-gray-50" data-filter="pastry" aria-label="Filter pastry">Pastry</button>
+          <button class="px-3 py-2 rounded-md bg-white border border-gray-200 hover:bg-gray-50" data-filter="food" aria-label="Filter food">Food</button>
+        </div>
+        <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Menu item 1 -->
+          <article class="bg-white rounded-lg shadow-sm p-4 flex gap-4" data-category="coffee" aria-label="Espresso item card">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=400&q=60" alt="Espresso" class="w-20 h-20 object-cover rounded" />
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold" style="font-family: Inter, sans-serif;">Espresso</h3>
+              <p class="text-sm text-gray-600">Rich, bold espresso shot with deep chocolate notes.</p>
+              <p class="mt-2 font-semibold text-primary">$3.50</p>
+            </div>
+          </article>
+          <!-- Menu item 2 -->
+          <article class="bg-white rounded-lg shadow-sm p-4 flex gap-4" data-category="coffee" aria-label="Cappuccino item card">
+            <img src="https://images.unsplash.com/photo-1495474472288-1d4c8b3f9d43?auto=format&fit=crop&w=400&q=60" alt="Cappuccino" class="w-20 h-20 object-cover rounded" />
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold" style="font-family: Inter, sans-serif;">Cappuccino</h3>
+              <p class="text-sm text-gray-600">Creamy texture with balanced milk foam.</p>
+              <p class="mt-2 font-semibold text-primary">$4.25</p>
+            </div>
+          </article>
+          <!-- Menu item 3 -->
+          <article class="bg-white rounded-lg shadow-sm p-4 flex gap-4" data-category="tea" aria-label="Green Tea item card">
+            <img src="https://images.unsplash.com/photo-1517495306984-1b8a0a4a37a5?auto=format&fit=crop&w=400&q=60" alt="Green tea" class="w-20 h-20 object-cover rounded" />
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold" style="font-family: Inter, sans-serif;">Green Tea</h3>
+              <p class="text-sm text-gray-600">Clean, refreshing, with subtle grassy notes.</p>
+              <p class="mt-2 font-semibold text-primary">$3.25</p>
+            </div>
+          </article>
+          <!-- Menu item 4 -->
+          <article class="bg-white rounded-lg shadow-sm p-4 flex gap-4" data-category="pastry" aria-label="Croissant item card">
+            <img src="https://images.unsplash.com/photo-1562967914-4b22b1f71d8?auto=format&fit=crop&w=400&q=60" alt="Croissant" class="w-20 h-20 object-cover rounded" />
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold" style="font-family: Inter, sans-serif;">Croissant</h3>
+              <p class="text-sm text-gray-600">Buttery layers with a light, flaky texture.</p>
+              <p class="mt-2 font-semibold text-primary">$3.50</p>
+            </div>
+          </article>
+          <!-- Menu item 5 -->
+          <article class="bg-white rounded-lg shadow-sm p-4 flex gap-4" data-category="food" aria-label="Avocado Toast item card">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d7e1a6?auto=format&fit=crop&w=400&q=60" alt="Avocado toast" class="w-20 h-20 object-cover rounded" />
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold" style="font-family: Inter, sans-serif;">Avocado Toast</h3>
+              <p class="text-sm text-gray-600">Whole-grain toast topped with avocado and chili flakes.</p>
+              <p class="mt-2 font-semibold text-primary">$6.50</p>
+            </div>
+          </article>
+          <!-- Menu item 6 -->
+          <article class="bg-white rounded-lg shadow-sm p-4 flex gap-4" data-category="food" aria-label="Quiche item card">
+            <img src="https://images.unsplash.com/photo-1543353071-86c8d80e66a8?auto=format&fit=crop&w=400&q=60" alt="Quiche" class="w-20 h-20 object-cover rounded" />
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold" style="font-family: Inter, sans-serif;">Quiche Lorraine</h3>
+              <p class="text-sm text-gray-600">Savory slice with cheese, bacon, and herbs.</p>
+              <p class="mt-2 font-semibold text-primary">$5.75</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="locations" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4" style="font-family: Inter, sans-serif;">Locations</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="bg-white rounded-lg shadow-sm p-4" aria-label="Downtown location">
+            <h3 class="text-lg font-semibold mb-2" style="font-family: Inter, sans-serif;">Downtown Café</h3>
+            <p class="text-sm text-gray-600 mb-2">123 Market Street, Cityville</p>
+            <ul class="text-sm text-gray-600 mb-2" aria-label="Hours">
+              <li>Mon-Fri: 7:00 - 18:00</li>
+              <li>Sat-Sun: 8:00 - 16:00</li>
+            </ul>
+            <a href="https://www.google.com/maps?q=123+Market+Street+Cityville" target="_blank" rel="noreferrer" class="inline-flex items-center text-primary hover:underline" aria-label="Open map Downtown Café">Map</a>
+          </article>
+          <article class="bg-white rounded-lg shadow-sm p-4" aria-label="Riverside location">
+            <h3 class="text-lg font-semibold mb-2" style="font-family: Inter, sans-serif;">Riverside Café</h3>
+            <p class="text-sm text-gray-600 mb-2">45 Riverfront Ave, Cityville</p>
+            <ul class="text-sm text-gray-600 mb-2" aria-label="Hours">
+              <li>Mon-Fri: 8:00 - 19:00</li>
+              <li>Sat-Sun: 9:00 - 17:00</li>
+            </ul>
+            <a href="https://www.google.com/maps?q=45+Riverfront+Ave+Cityville" target="_blank" rel="noreferrer" class="inline-flex items-center text-primary hover:underline" aria-label="Open map Riverside Café">Map</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-12 bg-surface">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4" style="font-family: Inter, sans-serif;">Gallery</h2>
+        <p class="text-sm text-gray-600 mb-4">Moments from our cafe: drinks, pastries, and interiors.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <button class="galleryThumb" aria-label="Open image 1">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=60" alt="Latte art" class="rounded-md w-full h-32 object-cover" />
+          </button>
+          <button class="galleryThumb" aria-label="Open image 2">
+            <img src="https://images.unsplash.com/photo-1526312420172-7f9a78d5d3cf?auto=format&fit=crop&w=600&q=60" alt="Croissant and coffee" class="rounded-md w-full h-32 object-cover" />
+          </button>
+          <button class="galleryThumb" aria-label="Open image 3">
+            <img src="https://images.unsplash.com/photo-1495478922432-caa77c3db1d8?auto=format&fit=crop&w=600&q=60" alt="Pastry assortment" class="rounded-md w-full h-32 object-cover" />
+          </button>
+          <button class="galleryThumb" aria-label="Open image 4">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=60" alt="Cafe interior" class="rounded-md w-full h-32 object-cover" />
+          </button>
+          <button class="galleryThumb" aria-label="Open image 5">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d7e1a6?auto=format&fit=crop&w=600&q=60" alt="Espresso cup" class="rounded-md w-full h-32 object-cover" />
+          </button>
+          <button class="galleryThumb" aria-label="Open image 6">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=60" alt="Pastry display" class="rounded-md w-full h-32 object-cover" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-cta" class="py-12">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-2" style="font-family: Inter, sans-serif;">Have a question or want to book a tasting?</h2>
+        <p class="text-sm text-gray-600 mb-4">Reach out and we will respond within one business day.</p>
+        <a href="contact.html" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-md hover:bg-blue-700 transition" aria-label="Go to contact page">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200">
+    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+      <p class="text-sm text-gray-600">&copy; 2025 Cafe Brand. All rights reserved.</p>
+      <div class="flex items-center space-x-3" aria-label="Social media">
+        <a href="#" aria-label="Twitter" class="text-gray-500 hover:text-primary">X</a>
+        <a href="#" aria-label="Instagram" class="text-gray-500 hover:text-primary">IG</a>
+        <a href="#" aria-label="Facebook" class="text-gray-500 hover:text-primary">FB</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-60" role="dialog" aria-label="Image viewer">
+     <button id="lightboxClose" aria-label="Close image viewer" class="absolute top-4 right-4 text-white" title="Close">✕</button>
+     <img id="lightboxImg" src="" alt="Expanded" class="max-w-full max-h-screen rounded" />
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
