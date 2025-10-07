@@ -1,0 +1,57 @@
+:root {
+  --primary: #2563EB;
+  --secondary: #7C3AED;
+  --accent: #F59E0B;
+  --bg: #FFFFFF;
+  --surface: #F9FAFB;
+  --text: #1F2937;
+  --text-secondary: #6B7280;
+}
+
+/* Basic layout helpers (Tailwind handles most styling when used via CDN). */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Lightbox styles for gallery */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+#lightbox.open {
+  display: flex;
+}
+#lightboxImg {
+  max-width: 92vw;
+  max-height: 80vh;
+  border-radius: 12px;
+}
+#lightboxClose {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Simple card hover for visual polish */
+.card:hover { transform: translateY(-1px); transition: transform 0.2s ease; }
+
+/* Utility helpers for buttons (non-Tailwind fallback) */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
